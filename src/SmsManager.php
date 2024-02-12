@@ -6,7 +6,7 @@ use Illuminate\Support\Manager;
 use Mokhosh\Sms\Drivers\Kavenegar;
 use Mokhosh\Sms\Enums\SmsProvider;
 
-class Sms extends Manager
+class SmsManager extends Manager
 {
     public function use(string|SmsProvider $provider)
     {
