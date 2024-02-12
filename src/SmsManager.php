@@ -4,6 +4,7 @@ namespace Mokhosh\Sms;
 
 use Illuminate\Support\Manager;
 use Mokhosh\Sms\Drivers\Kavenegar;
+use Mokhosh\Sms\Drivers\Log;
 use Mokhosh\Sms\Enums\SmsProvider;
 
 class SmsManager extends Manager
@@ -25,5 +26,10 @@ class SmsManager extends Manager
     protected function createKavenegarDriver(): Kavenegar
     {
         return $this->container->make(Kavenegar::class);
+    }
+
+    protected function createLogDriver(): Log
+    {
+        return $this->container->make(Log::class);
     }
 }
