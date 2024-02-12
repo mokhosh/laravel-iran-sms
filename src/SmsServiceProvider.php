@@ -17,7 +17,7 @@ class SmsServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel-iran-sms')
-            ->hasConfigFile()
+            ->hasConfigFile('sms')
             ->hasViews()
             ->hasMigration('create_laravel-iran-sms_table')
             ->hasCommand(SmsCommand::class);
