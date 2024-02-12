@@ -2,7 +2,6 @@
 
 namespace Mokhosh\Sms;
 
-use Mokhosh\Sms\Commands\SmsCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
