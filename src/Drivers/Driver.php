@@ -12,8 +12,10 @@ abstract class Driver
 
     abstract public function handle(): void;
 
-    public function send(string $message): self
+    public function send(string $text): self
     {
+        $this->text = $text;
+
         return $this;
     }
 
