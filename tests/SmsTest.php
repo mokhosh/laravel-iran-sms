@@ -1,18 +1,17 @@
 <?php
 
-use Illuminate\Support\Facades\Log;
 use Mokhosh\Sms\Drivers\Kavenegar;
+use Mokhosh\Sms\Drivers\NullDriver;
 use Mokhosh\Sms\Enums\SmsProvider;
 use Mokhosh\Sms\Facades\Sms;
 
 use function Pest\Laravel\instance;
 
-it('logs sms by default', function () {
-    Log::shouldReceive('info')->once()
-        ->withArgs(function ($message) {
-            return str_contains($message, 'test message')
-                && str_contains($message, '09123456789');
-        });
+it('uses null driver by default', function () {
+    $null = Mockery::mock(NullDriver::class)->makePartial();
+    $null->shouldReceive('handle')->once();
+
+    instance(NullDriver::class, $null);
 
     Sms::send('test message')
         ->to('09123456789');
