@@ -3,6 +3,7 @@
 use Mokhosh\Sms\Drivers\Kavenegar;
 use Mokhosh\Sms\Enums\SmsProvider;
 use Mokhosh\Sms\Facades\Sms;
+
 use function Pest\Laravel\instance;
 
 it('can send sms using kavenegar', function () {
