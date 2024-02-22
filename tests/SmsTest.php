@@ -2,6 +2,7 @@
 
 use Mokhosh\Sms\Drivers\Kavenegar;
 use Mokhosh\Sms\Drivers\NullDriver;
+use Mokhosh\Sms\Drivers\SmsIr;
 use Mokhosh\Sms\Enums\SmsProvider;
 use Mokhosh\Sms\Facades\Sms;
 
@@ -24,6 +25,17 @@ it('can send sms using kavenegar', function () {
     instance(Kavenegar::class, $kavenegar);
 
     Sms::use(SmsProvider::Kavenegar)
+        ->send('test message')
+        ->to('09123456789');
+});
+
+it('can send sms using sms.ir', function () {
+    $smsIr = Mockery::mock(SmsIr::class)->makePartial();
+    $smsIr->shouldReceive('handle')->once();
+
+    instance(SmsIr::class, $smsIr);
+
+    Sms::use(SmsProvider::SmsIr)
         ->send('test message')
         ->to('09123456789');
 });
