@@ -7,12 +7,12 @@ return [
 
         'kavenegar' => [
             'from' => env('SMS_KAVENEGAR_FROM', ''),
-            'apiKey' => env('SMS_KAVENEGAR_KEY'),
+            'api_key' => env('SMS_KAVENEGAR_KEY'),
         ],
 
         'smsir' => [
             'from' => env('SMS_SMSIR_FROM', ''),
-            'apiKey' => env('SMS_SMSIR_KEY'),
+            'api_key' => env('SMS_SMSIR_KEY'),
         ],
 
     ],
