@@ -9,8 +9,7 @@ class SmsIr extends Driver
 {
     public function __construct(
         protected Api $api,
-    )
-    {
+    ) {
 
     }
 
@@ -22,7 +21,7 @@ class SmsIr extends Driver
         );
     }
 
-    public function verify(string $number, int $template, null|array $parameters = null): void
+    public function verify(string $number, int $template, ?array $parameters = null): void
     {
         $parameters = collect($parameters)->map(function ($value, $key) {
             return new Parameters($key, $value);
