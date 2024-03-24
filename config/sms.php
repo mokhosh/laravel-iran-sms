@@ -10,5 +10,10 @@ return [
             'apiKey' => env('SMS_KAVENEGAR_KEY'),
         ],
 
+        'smsir' => [
+            'from' => env('SMS_SMSIR_FROM', ''),
+            'apiKey' => env('SMS_SMSIR_KEY'),
+        ],
+
     ],
 ];
