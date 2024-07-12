@@ -12,4 +12,8 @@ class NullDriver extends Driver
     public function handle(): void
     {
     }
+
+    public function verify(): void
+    {
+    }
 }
