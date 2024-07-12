@@ -9,11 +9,7 @@ class NullDriver extends Driver
         $this->from = '';
     }
 
-    public function handle(): void
-    {
-    }
+    public function handle(): void {}
 
-    public function verify(): void
-    {
-    }
+    public function verify(): void {}
 }

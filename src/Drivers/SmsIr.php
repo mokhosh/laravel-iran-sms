@@ -9,9 +9,7 @@ class SmsIr extends Driver
 {
     public function __construct(
         protected Api $api,
-    ) {
-
-    }
+    ) {}
 
     public function handle(): void
     {
